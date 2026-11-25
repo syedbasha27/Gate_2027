@@ -7,9 +7,10 @@ plus interactive labs and a 60-day plan. No server, build step or internet conne
 | File | Purpose |
 |---|---|
 | `index.html` | The whole app (notes, PYQ data, simulators) in one file |
-| `manifest.webmanifest` | Name, colours and icons so browsers can install it |
+| `manifest.json` | Name, colours and icons so browsers can install it |
 | `sw.js` | Service worker: caches everything so the app works offline |
-| `icons/` | 192 px and 512 px icons, a maskable icon, an Apple touch icon and a favicon |
+| `icon-192.png`, `icon-512.png`, `maskable-512.png` | Install icons |
+| `apple-touch-icon.png`, `favicon-32.png` | Apple touch icon and favicon |
 
 ## Try it on your computer
 A service worker only runs over **http://localhost** or **https://** (not by double-clicking the file).
@@ -24,7 +25,7 @@ A service worker only runs over **http://localhost** or **https://** (not by dou
 1. Upload the **contents of this folder** to any free static host that gives you HTTPS —
    GitHub Pages, Netlify (drag-and-drop), Cloudflare Pages or Vercel. Keep the files in the same folder structure.
 2. Open the link on your phone.
-   * **Android / Chrome:** tap **⬇ Install** in the app header (or the browser menu → *Install app*).
+   * **Android / Chrome:** tap **Install as an app** in the banner at the top (or the browser menu → *Install app*).
    * **iPhone / Safari:** Share → **Add to Home Screen**.
    * **Desktop Chrome / Edge:** click the install icon in the address bar.
 3. Open it once while online; after that it works with no connection.

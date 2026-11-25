@@ -1,10 +1,10 @@
 /* GATE CS 2027 study guide — service worker (offline support).
    Strategy: serve from cache instantly, refresh the cache in the background.
    The cache name carries a content hash, so a new index.html automatically replaces the old cache. */
-const CACHE = 'gate-cs-494c83f829';
-const ASSETS = ['./', './index.html', './manifest.webmanifest',
-  './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png',
-  './icons/apple-touch-icon.png', './icons/favicon-32.png'];
+const CACHE = 'gate-cs-ebd8588b7c';
+const ASSETS = ['./', './index.html', './manifest.json',
+  './icon-192.png', './icon-512.png', './maskable-512.png',
+  './apple-touch-icon.png', './favicon-32.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
